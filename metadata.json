@@ -1,0 +1,54 @@
+{
+  "name": "jonono-auditpol",
+  "version": "0.1.2",
+  "source": "UNKNOWN",
+  "author": "jon billingsley",
+  "license": "MIT",
+  "summary": "manage Windows audit policies",
+  "description": "This module is a type/provider to manage audit policies in\n    Windows via auditpol.exe.",
+  "project_page": "https://github.com/jonono/puppet-auditpol",
+  "dependencies": [
+
+  ],
+  "operatingsystem_support": [
+    {
+      "operatingsystem": "Windows"
+    }
+  ],
+  "types": [
+    {
+      "name": "auditpol",
+      "doc": "auditpol type for windows",
+      "properties": [
+        {
+          "name": "success",
+          "doc": "Whether auditing is enabled on success or not\n\nValid values are `enable`, `disable`. "
+        },
+        {
+          "name": "failure",
+          "doc": "Whether auditing is enabled on failure or not\n\nValid values are `enable`, `disable`. "
+        }
+      ],
+      "parameters": [
+        {
+          "name": "subcategory",
+          "doc": "The subcategory of the policy.\n\n"
+        }
+      ],
+      "providers": [
+        {
+          "name": "auditpol",
+          "doc": "* Required binaries: `auditpol.exe`.\n* Default for `osfamily` == `windows`."
+        }
+      ]
+    }
+  ],
+  "checksums": {
+    "CHANGELOG.md": "89a1644fb593b7ffa03db3a1200f81cb",
+    "LICENSE": "520d62e43ba42e78c18e526919ba6602",
+    "Modulefile": "e7facd8e17c3d2fa31db1f6f7b8ddc60",
+    "README.md": "958d2b04c3f24430913bbbb67b235ec5",
+    "lib/puppet/provider/auditpol/auditpol.rb": "02c5fc573377c3875291325510ff226d",
+    "lib/puppet/type/auditpol.rb": "5a094089bc8cd354dd04bb5951983b62"
+  }
+}
